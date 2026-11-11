@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panda Commerce</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 15px 0;
+        }
+
+        .navbar-brand img {
+            width: 165px;
+        }
+
+        .navbar-nav {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: #333 !important;
+            margin-right: 15px;
+        }
+
+        /* Banner */
+        .banner-bg {
+            background-color: #fceae8;
+            border-radius: 15px;
+            padding: 40px;
+        }
+
+        .banner-bg h1 {
+            font-weight: 700;
+        }
+
+        .banner-bg p {
+            color: #555;
+        }
+
+        .banner-bg img {
+            width: 100%;
+        }
+
+        .price {
+            color: #ff136f;
+            font-weight: 700;
+        }
+
+        .buy-btn {
+            background: linear-gradient(to bottom, #ff589b, #ff136f);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        /* Categories */
+        .category {
+            padding: 15px 30px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .category img {
+            width: 100px;
+        }
+
+        .category h2 {
+            font-weight: 700;
+        }
+
+        .watch {
+            background: linear-gradient(45deg, #ff9c35, #ffd019);
+        }
+
+        .bag {
+            background: linear-gradient(45deg, #ff589b, #ff136f);
+        }
+
+        .shoes {
+            background: linear-gradient(45deg, #4289ff, #3f07f8);
+        }
+
+        /* Product Cards */
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+
+        .product-card img {
+            padding: 15px;
+            width: 100%;
+        }
+
+        .product-card .card-body {
+            padding: 20px;
+        }
+
+        .product-card h5 {
+            font-weight: 700;
+        }
+
+        .see-all {
+            color: #ff9d00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Subscribe */
+        .subscribe {
+            background-color: #fceae8;
+            border-radius: 15px;
+            padding: 80px 20px;
+        }
+
+        .subscribe h2 {
+            font-weight: 700;
+        }
+
+        .subscribe input {
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            width: 280px;
+            max-width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                margin-left: 0;
+            }
+
+            .banner-bg {
+                padding: 25px;
+                text-align: center;
+            }
+
+            .banner-bg img {
+                margin-top: 25px;
+            }
+
+            .category {
+                padding: 15px;
+            }
+
+            .category img {
+                width: 75px;
+            }
+
+            .subscribe {
+                padding: 50px 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid px-5">
+
+            <a class="navbar-brand" href="#">
+                <img src="./Images/logo.png" alt="Panda Commerce">
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shoes">Shoes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#backpack">Backpack</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Banner Carousel Start -->
+    <div class="container mt-4">
+
+        <div id="pandaCarousel" class="carousel slide"
+            data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+
+                    <div class="row align-items-center banner-bg">
+
+                        <div class="col-md-7">
+                            <h1>MI TV 4S</h1>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Odio, sint ipsum amet ad.
+                            </p>
+
+                            <h1 class="price">$1200</h1>
+
+                            <button class="buy-btn">BUY NOW</button>
+                        </div>
+
+                        <div class="col-md-5">
+                            <img src="./Images/banner-images/tv.png"
+                                alt="MI TV">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+
+                    <div class="row align-items-center banner-bg">
+
+                        <div class="col-md-7">
+                            <h1>1More BT Headphone</h1>
+
+                            <p>
+                                Enjoy your favorite music with
+                                premium wireless headphones.
+                            </p>
+
+                            <h1 class="price">$700</h1>
+
+                            <button class="buy-btn">BUY NOW</button>
+                        </div>
+
+                        <div class="col-md-5">
+                            <img src="./Images/banner-images/headphone.png"
+                                alt="Headphone">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+
+                    <div class="row align-items-center banner-bg">
+
+                        <div class="col-md-7">
+                            <h1>XBOX 5</h1>
+
+                            <p>
+                                Enjoy an amazing gaming experience
+                                with our latest Xbox console.
+                            </p>
+
+                            <h1 class="price">$999</h1>
+
+                            <button class="buy-btn">BUY NOW</button>
+                        </div>
+
+                        <div class="col-md-5">
+                            <img src="./Images/banner-images/xbox.png"
+                                alt="Xbox">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#pandaCarousel"
+                    data-bs-slide-to="0" class="active"></button>
+
+                <button type="button" data-bs-target="#pandaCarousel"
+                    data-bs-slide-to="1"></button>
+
+                <button type="button" data-bs-target="#pandaCarousel"
+                    data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Previous -->
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#pandaCarousel" data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <!-- Next -->
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#pandaCarousel" data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+    <!-- Banner Carousel End -->
+
+
+    <!-- Categories Start -->
+    <div class="container my-5">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="category watch d-flex align-items-center
+                    justify-content-between">
+                    <h2>Watch</h2>
+                    <img src="./Images/categories/watch.png" alt="Watch">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="category bag d-flex align-items-center
+                    justify-content-between">
+                    <h2>Bag</h2>
+                    <img src="./Images/categories/bag.png" alt="Bag">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="category shoes d-flex align-items-center
+                    justify-content-between">
+                    <h2>Shoes</h2>
+                    <img src="./Images/categories/shoes.png" alt="Shoes">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Categories End -->
+
+
+    <!-- Shoes Section Start -->
+    <section id="shoes" class="container my-5">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="section-title">Shoes</h2>
+            <a href="#shoes" class="see-all">See all</a>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Shoe 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+
+                    <img src="./Images/shoes/shoe-1.png"
+                        class="card-img-top" alt="Reebok Dart Shoes">
+
+                    <div class="card-body">
+                        <h5>Reebok Dart Men's Shoes</h5>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloribus.
+                        </p>
+
+                        <h4>$799</h4>
+
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Shoe 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+
+                    <img src="./Images/shoes/shoe-2.png"
+                        class="card-img-top" alt="Reebok Pump">
+
+                    <div class="card-body">
+                        <h5>Reebok Pump</h5>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloribus.
+                        </p>
+
+                        <h4>$899</h4>
+
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Shoe 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+
+                    <img src="./Images/shoes/shoe-3.png"
+                        class="card-img-top" alt="Reebok All Terrain">
+
+                    <div class="card-body">
+                        <h5>Reebok All Terrain</h5>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloribus.
+                        </p>
+
+                        <h4>$999</h4>
+
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Shoes Section End -->
+
+
+    <!-- Backpack Section Start -->
+    <section id="backpack" class="container my-5">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="section-title">Backpack</h2>
+            <a href="#backpack" class="see-all">See all</a>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Backpack 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+
+                    <img src="./Images/bags/bag-1.png"
+                        class="card-img-top" alt="Ison Backpack">
+
+                    <div class="card-body">
+                        <h5>Ison Backpack</h5>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloribus.
+                        </p>
+
+                        <h4>$999</h4>
+
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Backpack 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+
+                    <img src="./Images/bags/bag-2.png"
+                        class="card-img-top" alt="Biaowang Backpack">
+
+                    <div class="card-body">
+                        <h5>Biaowang Backpack</h5>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloribus.
+                        </p>
+
+                        <h4>$1499</h4>
+
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Backpack 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+
+                    <img src="./Images/bags/bag-3.png"
+                        class="card-img-top" alt="Dxyizu Backpack">
+
+                    <div class="card-body">
+                        <h5>Dxyizu WS54 Smart</h5>
+
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloribus.
+                        </p>
+
+                        <h4>$2199</h4>
+
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Backpack Section End -->
+
+
+    <!-- Subscribe Section Start -->
+    <section id="contact" class="container my-5">
+
+        <div class="subscribe text-center">
+
+            <h2>LET'S STAY IN TOUCH</h2>
+
+            <p>Get updates on sales and more</p>
+
+            <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+
+                <input type="email" placeholder="Enter your email" required>
+
+                <button type="submit" class="buy-btn">
+                    SEND
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+    <!-- Subscribe Section End -->
+
+
+    <!-- Footer Start -->
+    <footer>
+
+        <p>
+            © Copyright 2010 Panda Commerce |
+            All rights Reserved
+        </p>
+
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
